@@ -37,13 +37,18 @@ I split in 30% test size and 70% train size.
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state=42)
 ```
 # Results
-MAE:
-MSE:
-R²:
-![results]()
+MAE: It's the Mean Absolute Error.  It measures the average of the absolute differences between the predicted values by the model and the actual values of the data. It is less sensitive to outliers. The lower the MAE value, the better the model's performance, indicating that the predictions are closer to the actual values. For example, if the MAE of a housing price prediction model is 1000, it means that, on average, the model's predictions deviate $1000 from the actual housing prices.
+
+MSE: Mean Squared Error. MSE penalizes larger errors more heavily than smaller ones due to the squaring operation. Consequently, MSE tends to be more sensitive to outliers compared to MAE. Lower values of MSE indicate better model performance.
+
+R²:R-squared. R-squared ranges from 0 to 1. Values between 0 and 1 indicate the proportion of variance explained by the model, with higher values indicating better fit.
+
+
+
+![results](https://github.com/arielcs309/ML-Sklearn/blob/main/Results.jpg)
 
 # Language
-![python]()
+![python](https://github.com/arielcs309/ML-Sklearn/blob/main/python.jpg)
 
 # How to execute the project
 ## Summarizing the project
