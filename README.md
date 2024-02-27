@@ -1,38 +1,49 @@
-# Machine Learning - 
+# Machine Learning 
 Using the package SKlearn
 
 # About the project
 
 The project uses machine learning with the package SKlearn. I tried to predict the house prices.
 
-![Scikitlearn](https://github.com/arielcs309/assets/blob/main/Indicators.png)
-
+![Scikitlearn](https://github.com/arielcs309/ML-Sklearn/blob/main/digits-dataset-scikit-learn-machine-learning-python-tutorial-1.png)
 
 ## Histogram
-![prices](https://github.com/arielcs309/assets/blob/main/Brazil%20map.png)
+``` bash
+ax = sns.histplot(data = db1, x= "Price", kde = True)
+ax.figure.set_size_inches(20,10)
+ax.set_title("Prices Histogram")
+ax.set_xlabel('Price');
+```
+![prices](https://github.com/arielcs309/ML-Sklearn/blob/main/Histogram.png)
 
 ## Correlation
-Price and square feet shows the highest correlation. The others don't have a good correlation since they're close to zero.
-![correlation](https://github.com/arielcs309/assets/blob/main/Table%20Clusters.png)
+Price and square feet have the highest correlation. The others don't have a good correlation since they're close to zero.
+![correlation](https://github.com/arielcs309/ML-Sklearn/blob/main/__results___5_0.png)
 
 ## Dummies
-So I had to create dummies with the code below:
+So I had to create dummies with the code below since there was 3 kinds of neighborhood. 
 ```bash
 db1 = pd.get_dummies(db, columns = ['Neighborhood'],
                     prefix = 'C')
 ```
-Since there was 3 kinds of neighborhood. 
+![dummy](https://github.com/arielcs309/ML-Sklearn/blob/main/Dummies.png)
 
-![dummy](https://github.com/arielcs309/assets/blob/main/dendrogram.png)
+## Getting the data ready to train
+So I have to split one part of the data to train and the other part to test.
+That prevents Overfitting. 
+The model shouldn't generalize and if there is new data then it won't be ready to categorize.
+I split in 30% test size and 70% train size.
+```bash
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state=42)
+```
+# Results
+MAE:
+MSE:
+R²:
+![results]()
 
-## Analysis of Variance (ANOVA)
-
-All variables had a p-value less than 0.05, leading to the rejection of the null hypothesis. This indicates that they demonstrated significance in differentiating the clusters.
-Null Hypothesis (H0): The means of the groups are equal.
-Alternative Hypothesis (H1): At least one group mean is different from the others.
-![P Value](https://github.com/arielcs309/assets/blob/main/P%20value.png)
 # Language
-![python](https://github.com/arielcs309/assets/blob/main/R%20language.jpg)
+![python]()
 
 # How to execute the project
 ## Summarizing the project
